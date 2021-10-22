@@ -3,46 +3,141 @@
     padding: 0;
     box-sizing: border-box;
 }
-.gusset {
-    display: flex;
-        align-items: center;
-        justify-content: center;
-    height: 200px;
-    border: 1px solid black;
+.container {
+    background-color: #ffc0cb;
 }
-    .col-1 > .gusset::after {
-        content: "col 1";
+    .father .row {
+        background-color: #f07f80;
+        margin: 5px;
     }
-    .col-2 > .gusset::after {
-        content: "col 2";
+    .row > [class*="col"]:not(.father [class*="col"]) {
+        border: 1px solid black;
     }
-    .col-3 > .gusset::after {
-        content: "col 3";
+    .father .row > [class*="col"] {
+        border: 1px solid white;
     }
-    .col-4 > .gusset::after {
-        content: "col 4";
-    }
-    .col-5 > .gusset::after {
-        content: "col 5";
-    }
-    .col-6 > .gusset::after {
-        content: "col 6";
-    }
-    .col-7 > .gusset::after {
-        content: "col 7";
-    }
-    .col-8 > .gusset::after {
-        content: "col 8";
-    }
-    .col-9 > .gusset::after {
-        content: "col 9";
-    }
-    .col-10 > .gusset::after {
-        content: "col 10";
-    }
-    .col-11 > .gusset::after {
-        content: "col 11";
-    }
-    .col-12 > .gusset::after {
-        content: "col 12";
-    }
+        .gusset {
+            display: flex;
+                align-items: center;
+                justify-content: center;
+            height: 200px;
+        }
+        .gusset-nested {
+            display: flex;
+            flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 200px;
+        }
+        
+        .father > .gusset::after {
+            display: none;
+        }
+        .col-1 > .gusset::after {
+            content: "col 1";
+        }
+            .col-1 > .gusset-nested::before {
+                content:  "Nested";
+            }
+            .col-1 > .gusset-nested::after {
+                content:  "col 1";
+            }
+        .col-2 > .gusset::after {
+            content: "col 2";
+        }
+            .col-2 > .gusset-nested::before {
+                content:  "Nested";
+            }
+            .col-2 > .gusset-nested::after {
+                content:  "col 2";
+            }
+        .col-3 > .gusset::after {
+            content: "col 3";
+        }
+            .col-3 > .gusset-nested::before {
+                content:  "Nested";
+            }
+            .col-3 > .gusset-nested::after {
+                content:  "col 3";
+            }
+        .col-4 > .gusset::after {
+            content: "col 4";
+        }
+            .col-4 > .gusset-nested::before {
+                content:  "Nested";
+            }
+            .col-4 > .gusset-nested::after {
+                content:  "col 4";
+            }
+        .col-5 > .gusset::after {
+            content: "col 5";
+        }
+            .col-5 > .gusset-nested::before {
+                content:  "Nested";
+            }
+            .col-5 > .gusset-nested::after {
+                content:  "col 5";
+            }
+        .col-6 > .gusset::after {
+            content: "col 6";
+        }
+            .col-6 > .gusset-nested::before {
+                content:  "Nested";
+            }
+            .col-6 > .gusset-nested::after {
+                content:  "col 6";
+            }
+        .col-7 > .gusset::after {
+            content: "col 7";
+        }
+            .col-7 > .gusset-nested::before {
+                content:  "Nested";
+            }
+            .col-7 > .gusset-nested::after {
+                content:  "col 7";
+            }
+        .col-8 > .gusset::after {
+            content: "col 8";
+        }
+            .col-8 > .gusset-nested::before {
+                content:  "Nested";
+            }
+            .col-8 > .gusset-nested::after {
+                content:  "col 8";
+            }
+        .col-9 > .gusset::after {
+            content: "col 9";
+        }
+            .col-9 > .gusset-nested::before {
+                content:  "Nested";
+            }
+            .col-9 > .gusset-nested::after {
+                content:  "col 9";
+            }
+        .col-10 > .gusset::after {
+            content: "col 10";
+        }
+            .col-10 > .gusset-nested::before {
+                content:  "Nested";
+            }
+            .col-10 > .gusset-nested::after {
+                content:  "col 10";
+            }
+        .col-11 > .gusset::after {
+            content: "col 11";
+        }
+            .col-11 > .gusset-nested::before {
+                content:  "Nested";
+            }
+            .col-11 > .gusset-nested::after {
+                content:  "col 11";
+            }
+        .col-12 > .gusset::after {
+            content: "col 12";
+        }
+            .col-12 > .gusset-nested::before {
+                content:  "Nested";
+            }
+            .col-12 > .gusset-nested::after {
+                content:  "col 12";
+            }
