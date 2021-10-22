@@ -29,10 +29,7 @@
                 justify-content: center;
                 height: 200px;
         }
-        
-        .father > .gusset::after {
-            display: none;
-        }
+
         .col-1 > .gusset::after {
             content: "col 1";
         }
